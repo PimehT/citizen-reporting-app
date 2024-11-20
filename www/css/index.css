@@ -1,0 +1,405 @@
+/* GENERAL styles */
+html {
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #f9f9f9;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 15px;
+}
+
+/* HEADER styles */
+header {
+  background: linear-gradient(90deg, #333, #0779e4);
+  color: #fff;
+  padding: 20px 0;
+  border-bottom: #0779e4 3px solid;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 15px;
+}
+
+header h1 {
+  margin: 0;
+  font-size: clamp(1.8rem, 2.5vw, 3rem);
+}
+
+header #user-name {
+  color: #fff;
+}
+
+header nav {
+  display: flex;
+  gap: 15px;
+}
+
+header nav a, .sign-out {
+  color: #fff;
+  text-decoration: none;
+  padding: 5px 10px;
+  transition: background 0.3s ease;
+}
+
+header nav a:hover, .sign-out:hover {
+  background: #0779e4;
+  border-radius: 5px;
+}
+
+nav a.active {
+  background: #065bb5;
+  color: #fff;
+  border-radius: 5px;
+}
+
+.sign-out {
+  color: #ccc;
+  border: none;
+  background: none;
+  font-size: 1rem;
+}
+
+.sign-out:hover {
+  background-color: #c82333;
+}
+
+.sign-out:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(220, 53, 69, 0.5);
+}
+
+/* MAIN styles */
+main {
+  padding: 20px;
+  background: #fff;
+  border-radius: 5px;
+  margin-top: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border: 1px solid #ddd;
+}
+
+h2 {
+  color: #333;
+}
+
+/* FORM styles */
+form label {
+  display: block;
+  margin-top: 10px;
+}
+
+form input[type="text"],
+form input[type="password"],
+form input[type="file"],
+form input[type="email"],
+form textarea,
+form select {
+  width: 100%;
+  max-width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+form button, #auth-section button {
+  display: block;
+  background: #0779e4;
+  color: #fff;
+  border: none;
+  padding: 10px;
+  margin-top: 20px;
+  width: 100%;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background 1s ease;
+}
+
+form button:hover, form button:active,
+#auth-section button:hover, #auth-section button:active {
+  background: linear-gradient(90deg, #0779e4, #065bb5);
+  transform: scale(1.01);
+}
+
+#auth-section, #add-incident-section {
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+#auth-section h2 {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+button#google-signin,
+button#facebook-signin {
+  background-color: rgb(0, 0, 0);
+  padding-bottom: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap : 10px;
+  padding: 0;
+}
+
+button#facebook-signin {
+  background: #0779e4;
+}
+
+button#google-signin:hover,
+button#facebook-signin:hover {
+  background: linear-gradient(90deg, #000000, #065bb5);
+  transform: scale(1.01);
+}
+
+button#facebook-signin:hover {
+  background: linear-gradient(90deg, #000000, #3b5998);
+}
+
+.google-icon, .facebook-icon {
+  width: 20px;
+  height: 20px;
+}
+
+
+/* SECTION transitions */
+.hidden {
+  display: none;
+}
+
+section {
+  opacity: 1;
+  transition: opacity 0.3s ease-in-out;
+}
+
+/* SPINNER styles */
+
+/* .spinner {
+  border: 5px solid #f3f3f3;
+  border-top: 5px solid #0779e4;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+#loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: rgba(255, 255, 255, 0.8);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+} */
+
+
+/* FILTER STYLES */
+.filter {
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 15px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.filter label {
+  font-weight: bold;
+  margin-right: 10px;
+  color: #333;
+}
+
+.filter select {
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #fff;
+  color: #333;
+  font-size: 1em;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.filter select:focus {
+  border-color: #007bff;
+}
+
+/* CARDS display styles */
+#incidents-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.incident-card {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 1rem;
+  margin-bottom: 20px;
+  width: 100%;
+  max-width: 100%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.incident-card:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.incident-card h3 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.incident-card p {
+  color: #666;
+  margin: 5px 0;
+}
+
+.incident-card .description {
+  margin-bottom: 10px;
+}
+
+.incident-card .read-more {
+  color: #007bff;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.incident-card .read-more:hover {
+  text-decoration: none;
+}
+
+.incident-card > .author {
+  font-weight: bold;
+  color: #00b503;
+}
+
+.incident-card img {
+  max-width: 100%;
+  height: auto;
+  margin-top: 1rem;
+  border-radius: 4px;
+}
+
+.incident-card .category {
+  font-weight: bold;
+  color: #007bff;
+}
+
+.icon {
+  width: 12px;
+}
+
+.incident-card .timestamp {
+  font-size: 0.9em;
+  color: #999;
+}
+
+
+/* RESPONSIVE Styles */
+@media (max-width: 768px) {
+  .header-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  header h1 {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+
+  header #user-name {
+    margin: 5px 0;
+  }
+
+  header nav {
+    flex-direction: column;
+    width: 100%;
+    gap: 5px;
+  }
+
+  header nav a {
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+  }
+
+  main {
+    margin-top: 10px;
+  }
+
+  .incident-card {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 0;
+  }
+
+  .header-container h1 {
+    font-size: 1.5em;
+    display: flex;
+    align-items: center;
+    text-align: center;
+  }
+
+  form input[type="text"],
+  form input[type="password"],
+  form input[type="file"],
+  form textarea,
+  form select {
+    padding: 8px;
+  }
+
+  form button {
+    padding: 8px;
+  }
+}

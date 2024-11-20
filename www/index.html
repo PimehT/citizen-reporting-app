@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<!--  <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;">-->
+  <meta name="format-detection" content="telephone=no">
+  <meta name="msapplication-tap-highlight" content="no">
+  <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
+  <meta name="color-scheme" content="light dark">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+  <link rel="stylesheet" href="css/index.css">
+  <title>Citizens Reporting Solution</title>
+</head>
+<body>
+<header role="banner">
+  <div class="header-container">
+    <h1>Citizens Reporting Solution</h1>
+    <h2 id="user-name" class="hidden"></h2>
+    <nav role="navigation">
+      <a href="#" id="browse-incidents" class="active">Browse Incidents</a>
+      <a href="#" id="add-incident">Add Incident</a>
+      <a href="#" id="auth">Login</a>
+    </nav>
+    <button id="signout" class="hidden">Sign Out</button>
+  </div>
+</header>
+
+<div class="container">
+  <main role="main">
+    <section id="add-incident-section" class="hidden">
+      <h2>Submit a New Incident</h2>
+      <form id="incident-form">
+        <label for="title">Title:</label>
+        <input type="text" id="title" name="title" required />
+
+        <label for="category">Category:</label>
+        <select id="category" name="category" required>
+          <option value="accident">Accident</option>
+          <option value="fighting">Fighting</option>
+          <option value="rioting">Rioting</option>
+        </select>
+
+        <label for="description">Description:</label>
+        <textarea id="description" name="description" required></textarea>
+<!-- 
+        <label for="image">Upload Image:</label>
+        <input type="file" id="image" name="image" accept="image/png, image/jpeg" /> -->
+
+        <button type="submit">Submit Incident</button>
+      </form>
+    </section>
+
+    <section id="browse-incidents-section">
+      <h2>All Incidents</h2>
+      <div class="filter">
+        <label for="filter-category">Filter by Category:</label>
+        <select id="filter-category">
+          <option value="all">All</option>
+          <option value="accident">Accident</option>
+          <option value="fighting">Fighting</option>
+          <option value="rioting">Rioting</option>
+        </select>
+      </div>
+      <div id="loader" class="hidden">
+        <div class="spinner"></div>
+      </div>
+      <div id="incidents-container">
+        <!-- Incidents will be dynamically added here -->
+      </div>
+    </section>    
+
+    <section id="auth-section" class="hidden">
+      <h2 id="auth-title">Sign In Methods</h2>
+      <button type="button" id="google-signin">
+        <img src="img/google.svg" alt="Google Icon" class="google-icon">
+        <p>Sign in with Google</p>
+      </button>
+    </section>
+  </main>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+<script src="js/app.js" type="module"></script>
+</body>
+</html>
