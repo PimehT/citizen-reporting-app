@@ -6,7 +6,6 @@ import { getAuth, signInWithPopup, GoogleAuthProvider } from "https://www.gstati
 
 
 const firebaseConfig = {
-  apiKey: "AIzaSyATs1u-mGSo4jZvD4wmulPitvPVbR0rNzc",
   authDomain: "cordova-project-b98f1.firebaseapp.com",
   projectId: "cordova-project-b98f1",
   storageBucket: "cordova-project-b98f1.firebasestorage.app",
